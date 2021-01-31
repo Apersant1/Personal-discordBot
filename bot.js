@@ -17,7 +17,7 @@ robot.on('message', (msg) => { // Реагирование на сообщени
     var comm = msg.content.trim() + " ";
     var comm_name = comm.slice(0, comm.indexOf(" "));
     var messArr = comm.split(" ");
-    for (comm_count in comms.comms) {
+    for (let comm_count in comms.comms) {
       var comm2 = prefix + comms.comms[comm_count].name;
       if (comm2 == comm_name) {
         comms.comms[comm_count].out(robot, msg, messArr);
